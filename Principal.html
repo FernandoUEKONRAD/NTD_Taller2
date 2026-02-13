@@ -5,35 +5,104 @@
     <title>Iron Man - Página Principal</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #c1121f;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            margin-top: 25px;
+            font-weight: 300;
+            font-size: 28px;
             text-align: center;
         }
-        nav a {
-            margin: 10px;
-            padding: 10px 20px;
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #151515;
+            padding: 20px 30px;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 18px rgba(255, 0, 0, 0.5);
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 25px;
             background: #c1121f;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s;
         }
-        nav a:hover {
+
+        .card a:hover {
             background: #780000;
         }
     </style>
 </head>
 <body>
 
-    <h1>Iron Man</h1>
-    <h2>Bienvenido</h2>
+    <header>
+        <h1>IRON MAN</h1>
+    </header>
 
+    <h2>Bienvenido</h2>
     <p>Selecciona una sección para conocer más sobre Iron Man.</p>
 
     <nav>
-        <a href="Seccion_1.html">Sección 1: Origen y Personalidad</a>
-        <a href="Seccion_2.html">Sección 2</a>
-        <a href="Seccion_3.html">Sección 3</a>
+        <div class="card">
+            <h3>Origen y Personalidad</h3>
+            <a href="Seccion_1.html">Ir a Sección 1</a>
+        </div>
+
+        <div class="card">
+            <h3>Sección 2</h3>
+            <a href="Seccion_2.html">Ir a Sección 2</a>
+        </div>
+
+        <div class="card">
+            <h3>Sección 3</h3>
+            <a href="Seccion_3.html">Ir a Sección 3</a>
+        </div>
     </nav>
 
 </body>
