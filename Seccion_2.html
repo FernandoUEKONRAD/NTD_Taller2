@@ -33,6 +33,42 @@
         }
         section#contexto-detallado h3 { margin-top: 0; color: #ffd700; }
         ul.plain { list-style: none; padding: 0; margin: 0; }
+
+        /* Nueva galería de trajes */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+        .gallery figure {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 8px;
+            width: calc(33.33% - 16px);
+            box-sizing: border-box;
+            margin: 0;
+            text-align: center;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+        .gallery figcaption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+        @media (max-width: 800px) {
+            .gallery figure { width: calc(50% - 16px); }
+        }
+        @media (max-width: 480px) {
+            .gallery figure { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -63,6 +99,22 @@
         <li>Superfuerza</li>
         <li>Nanotecnología</li>
     </ul>
+
+    <!-- Galería de imágenes de trajes -->
+    <section class="gallery" aria-label="Galería de trajes de Iron Man">
+        <figure>
+            <img src="images/mark1.jpg" alt="Traje Mark I de Iron Man">
+            <figcaption>Mark I — Primer traje improvisado</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mark3.jpg" alt="Traje Mark III de Iron Man">
+            <figcaption>Mark III — Diseño clásico rojo y dorado</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mark85.jpg" alt="Traje Mark LXXXV de Iron Man">
+            <figcaption>Mark LXXXV — Traje avanzado con nanotecnología</figcaption>
+        </figure>
+    </section>
 
     <nav>
         <a href="Seccion_1.html">Sección 1</a>

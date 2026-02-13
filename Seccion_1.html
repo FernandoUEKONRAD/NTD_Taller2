@@ -8,22 +8,40 @@
             font-family: Arial, sans-serif;
             background-color: #111;
             color: white;
-            text-align: center;
+            margin: 0;
+            padding: 0;
         }
-        nav a {
-            margin: 10px;
+
+        /* Contenedor del menú alineado a la derecha */
+        .menu-right {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-right a {
+            margin: 5px 0;
             padding: 10px 20px;
             background: #c1121f;
             color: white;
             text-decoration: none;
             border-radius: 6px;
+            text-align: center;
         }
-        nav a:hover {
+
+        .menu-right a:hover {
             background: #780000;
+        }
+
+        h1, h2, p {
+            text-align: center;
         }
     </style>
 </head>
 <body>
+
     <h1>Iron Man</h1>
     <h2>Sección 1: Origen y Personalidad</h2>
 
@@ -31,8 +49,9 @@
     <p>Evoluciona de empresario arrogante a héroe responsable.</p>
     <p>Enfrenta conflictos internos como culpa y trauma.</p>
 
-    <nav>
-        <a href="Seccion_1.html">Sección 1</a>
+    <!-- Menú al costado derecho -->
+    <nav class="menu-right">
+        <a href="principal.html">Inicio</a>
         <a href="Seccion_2.html">Sección 2</a>
         <a href="Seccion_3.html">Sección 3</a>
     </nav>
