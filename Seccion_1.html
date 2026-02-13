@@ -33,17 +33,17 @@
             font-weight: 300;
         }
 
-        /* Menú lateral derecho */
-        .menu-right {
+        /* Menú lateral izquierdo (AJUSTADO) */
+        .menu-left {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 150px; /* MÁS ABAJO PARA QUE NO CHOQUE CON TITULO */
+            left: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
 
-        .menu-right a {
+        .menu-left a {
             padding: 10px 20px;
             background: #c1121f;
             color: white;
@@ -52,11 +52,12 @@
             font-weight: bold;
             transition: 0.3s;
             text-align: center;
+            width: 120px;
         }
 
-        .menu-right a:hover {
+        .menu-left a:hover {
             background: #780000;
-            transform: translateX(-5px);
+            transform: translateX(5px);
         }
 
         /* Imagen principal */
@@ -116,8 +117,8 @@
         <p>A lo largo de su evolución, Tony pasa de ser un empresario arrogante a un héroe decidido, enfrentando traumas, culpa y responsabilidad.</p>
     </div>
 
-    <!-- Menú lateral derecho -->
-    <nav class="menu-right">
+    <!-- Menú lateral izquierdo -->
+    <nav class="menu-left">
         <a href="principal.html">Inicio</a>
         <a href="Seccion_2.html">Sección 2</a>
         <a href="Seccion_3.html">Sección 3</a>

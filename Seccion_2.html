@@ -5,81 +5,142 @@
     <title>Iron Man - Sección 2</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
             color: white;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        nav a {
-            margin: 10px;
+
+        /* Encabezado */
+        header {
+            background: #c1121f;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 25px;
+            font-weight: 300;
+        }
+
+        /* Menú lateral izquierdo */
+        .menu-left {
+            position: fixed;
+            top: 150px; /* Ajustado para no chocar con el título */
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-left a {
             padding: 10px 20px;
             background: #c1121f;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-        }
-        nav a:hover {
-            background: #780000;
-        }
-        section#contexto-detallado {
-            max-width: 900px;
-            margin: 20px auto;
-            text-align: left;
-            background: rgba(255,255,255,0.03);
-            padding: 18px;
             border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+            width: 120px;
         }
-        section#contexto-detallado h3 { margin-top: 0; color: #ffd700; }
-        ul.plain { list-style: none; padding: 0; margin: 0; }
 
-        /* Nueva galería de trajes */
+        .menu-left a:hover {
+            background: #780000;
+            transform: translateX(5px);
+        }
+
+        /* Contenedor principal */
+        #contexto-detallado {
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,0,0,0.25);
+        }
+
+        #contexto-detallado h3 {
+            color: #ffd700;
+            margin-top: 0;
+        }
+
+        ul.plain {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Galería */
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 18px;
             justify-content: center;
             margin: 20px auto;
             max-width: 1000px;
         }
+
         .gallery figure {
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
-            padding: 8px;
-            width: calc(33.33% - 16px);
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 10px;
+            width: calc(33.33% - 18px);
             box-sizing: border-box;
             margin: 0;
             text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(255,0,0,0.15);
         }
+
+        .gallery figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255,0,0,0.4);
+        }
+
         .gallery img {
             width: 100%;
-            height: auto;
-            border-radius: 6px;
-            display: block;
+            border-radius: 8px;
         }
+
         .gallery figcaption {
             margin-top: 8px;
             font-size: 0.9rem;
-            color: #ddd;
+            color: #f1f1f1;
         }
+
         @media (max-width: 800px) {
-            .gallery figure { width: calc(50% - 16px); }
+            .gallery figure { width: calc(50% - 18px); }
         }
+
         @media (max-width: 480px) {
             .gallery figure { width: 100%; }
         }
     </style>
 </head>
+
 <body>
-    <h1>Iron Man</h1>
+
+    <header>
+        <h1>IRON MAN</h1>
+    </header>
+
     <h2>Sección 2: Tecnología y Armaduras</h2>
 
     <section id="contexto-detallado">
         <h3>🔬 COMPAÑERO 2: Inteligencia, tecnología y armaduras</h3>
-        <h4>🔹 1. Intelecto y habilidades científicas</h4>
 
-        <p>Tony Stark es uno de los cerebros más brillantes del universo Marvel. Contexto detallado:</p>
+        <h4>🔹 1. Intelecto y habilidades científicas</h4>
+        <p>Tony Stark es uno de los cerebros más brillantes del universo Marvel. Algunos puntos clave:</p>
 
         <ul class="plain">
             <li><strong>Ingeniero mecánico y electrónico.</strong></li>
@@ -88,38 +149,42 @@
             <li><strong>Diseñador del Reactor ARC,</strong> fuente de energía limpia y poderosa.</li>
         </ul>
 
-        <p>Estas habilidades y tecnologías sustentan sus armaduras y la evolución desde la Mark I hasta la Mark LXXXV.</p>
+        <p>Estas habilidades impulsaron la creación y evolución de sus armaduras, desde la Mark I hasta la Mark LXXXV.</p>
     </section>
 
-    <p>Tecnologías y capacidades destacadas:</p>
+    <p style="text-align: center;">Tecnologías y capacidades destacadas:</p>
 
-    <ul style="list-style: none; padding: 0;">
+    <ul style="list-style: none; padding: 0; text-align: center;">
         <li>Vuelo supersónico</li>
         <li>Rayos repulsores</li>
         <li>Superfuerza</li>
         <li>Nanotecnología</li>
     </ul>
 
-    <!-- Galería de imágenes de trajes -->
+    <!-- Galería -->
     <section class="gallery" aria-label="Galería de trajes de Iron Man">
         <figure>
             <img src="images/mark1.jpg" alt="Traje Mark I de Iron Man">
             <figcaption>Mark I — Primer traje improvisado</figcaption>
         </figure>
+
         <figure>
             <img src="images/mark3.jpg" alt="Traje Mark III de Iron Man">
             <figcaption>Mark III — Diseño clásico rojo y dorado</figcaption>
         </figure>
+
         <figure>
             <img src="images/mark85.jpg" alt="Traje Mark LXXXV de Iron Man">
-            <figcaption>Mark LXXXV — Traje avanzado con nanotecnología</figcaption>
+            <figcaption>Mark LXXXV — Nanotecnología avanzada</figcaption>
         </figure>
     </section>
 
-    <nav>
+    <!-- Menú lateral izquierdo -->
+    <nav class="menu-left">
+        <a href="principal.html">Inicio</a>
         <a href="Seccion_1.html">Sección 1</a>
-        <a href="Seccion_2.html">Sección 2</a>
         <a href="Seccion_3.html">Sección 3</a>
     </nav>
+
 </body>
 </html>
